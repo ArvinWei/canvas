@@ -6,7 +6,7 @@ autoSetCanvasSize(yyy)
 
 listenToUser(yyy)
 
-
+/***********切换状态******************/
 var eraserEnabled = false
 pen.onclick = function(){
   eraserEnabled = false
@@ -18,9 +18,11 @@ eraser.onclick = function(){
   eraser.classList.add('active')
   pen.classList.remove('active')
 }
+/*****************清空屏幕***************/
 clear.onclick = function(){
   context.clearRect(0, 0, yyy.width, yyy.height);
 }
+/*****************保存图片***************/
 download.onclick = function(){
   var url = yyy.toDataURL("image/png")
   var a = document.createElement('a')
@@ -31,7 +33,7 @@ download.onclick = function(){
   a.click()
 }
 
-
+/****************画笔颜色更改****************/
 red.onclick = function(){
   context.fillStyle = 'red'
   context.strokeStyle = 'red'
@@ -53,7 +55,7 @@ blue.onclick = function(){
   grey.classList.remove('active')
   blue.classList.add('active')
 }
-
+/***************画笔粗细切换*****************/
 thin.onclick = function(){
   lineWidth = 5
 }
@@ -61,7 +63,7 @@ thick.onclick = function(){
   lineWidth = 10
 }
 
-/******/
+/********************************/
 
 function autoSetCanvasSize(canvas) {
   setCanvasSize()

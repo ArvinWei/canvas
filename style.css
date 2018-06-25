@@ -31,7 +31,7 @@ body{
   margin: 0 10px;
 }
 .actions svg.active{
-  fill: red;
+  fill: gray;
   transform: scale(1.2);
 }
 .colors{
